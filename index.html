@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="custom-css/custom-style.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">
+        </script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+        
+        
+        <div id='cssmenu' class="navbar navbar-default navbar-fixed-top" >
+       <div class="container">
+      <div id="sidebar">
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Our Firm</a></li>
+              <li><a href="#">Consultation Process</a></li>
+              <li><a href="#">Fees and Costs</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Directions</a></li>
+              <li><a href="#">Online Resources</a></li>
+              <li><a href="#">Teaching the Law</a></li>
+          </ul>
+      </div>
+      <div class="main-content">
+          <div class="swipe-area"></div>
+          <a href="#" data-toggle=".container" id="sidebar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a>
+      </div>
+    </div>
+            <img id="img2" src="http://www.lindsayfournier.com/images/logo.png">
+        </div>
+        
+        
+        
+        <div id="jumbotron1" class="jumbotron">
+            <div class="container">
+                <h1 id="h1injumbo">Larrimore and Farnish, LLP</h1>
+                <hr id="hr1">
+                <h2 id="h2injumbo">Experience . Personal Attention . Results</h2>
+                <p id="pinjumbo">
+                    Our personal injury law firm represents people with serious injuries throughout Pennsylvania and New Jersey. With broad expertise, a strong commitment to ethics, and a history of fighting for justice for our clients, we are able to offer you the best in legal representation.
+
+We hope that our website will help you decide whether we can fight for you. For more information, please email us or call us at 215-209-8500. We pride ourselves on giving all of our clients the personal attention they deserve, and your initial consultation is always free.
+                </p>
+                <div id="welltab" class="well well-lg">
+                    <div class="row" id="thumbnail1">
+                        <div class="col-sm-6 col-md-4" id="width1">
+                            <div id="border2" class="thumbnail">
+                            <div class="caption">
+                                
+                                <p id="pinbutton"><a id="button1" href="#" class="btn btn-primary" role="button">Email</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row" id="thumbnail2">
+                        <div class="col-sm-6 col-md-4" id="width2">
+                            <div id="border2" class="thumbnail">
+                            <div class="caption">
+                                <p id="pinbutton"><a id="button1" href="#" class="btn btn-primary" role="button">Call</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--<div id="well1" class="well well-lg">
+            <h1 id="h1inwell"></h1>
+        </div>-->
+        
+        
+    <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+                           $(".container").addClass("open-sidebar");
+                           return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+      
+    </script>    
+        
+</html>
